@@ -1,0 +1,64 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="registro.Master.cs" Inherits="SkillsUp.PaginaMaestra.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server" >
+    <link href="../Recursos/estilos/estilos.css" rel="stylesheet" />
+
+
+      <!--js-->
+    <script src="../Recursos/js_predeterminadas/jquery-3.4.1.min.js"></script>
+    <script src="../Recursos/js_predeterminadas/jquery-confirm.js"></script>
+    <link href="../Recursos/css_predeterminadas/jquery-confirm.css" rel="stylesheet" />
+    <script src="../Recursos/js_predeterminadas/bootstrap.js"></script>
+    <link href="../Recursos/css_predeterminadas/bootstrap.css" rel="stylesheet" />
+    <link href="../Recursos/css_predeterminadas/estilos.css" rel="stylesheet" />
+    
+
+
+ 
+
+
+
+
+    <!--____________________________________________________________________-->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="../Recursos/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../Recursos/css/animate.css" rel="stylesheet" />
+    <link href="../Recursos/css/owl.carousel.min.css" rel="stylesheet" />
+    <link href="../Recursos/css/themify-icons.css" rel="stylesheet" />
+    <link href="../Recursos/css/flaticon.css" rel="stylesheet" />
+    <link href="../Recursos/css/magnific-popup.css" rel="stylesheet" />
+    <link href="../Recursos/css/style.css" rel="stylesheet" />
+    <link href="../Recursos/css/slick.css" rel="stylesheet" />
+    <link href="../Recursos/css/demo.css" rel="stylesheet" />
+
+<%--    <script src="../Recursos/js/jquery-1.12.1.min.js"></script>--%>
+    <script src="../Recursos/js/popper.min.js"></script>
+    <script src="../Recursos/js/bootstrap.min.js"></script>
+    <script src="../Recursos/js/jquery.magnific-popup.js"></script>
+    <script src="../Recursos/js/swiper.min.js"></script>
+    <script src="../Recursos/js/masonry.pkgd.js"></script>
+    <script src="../Recursos/js/owl.carousel.min.js"></script>
+    <script src="../Recursos/js/jquery.nice-select.min.js"></script>
+    <script src="../Recursos/js/slick.min.js"></script>
+    <script src="../Recursos/js/jquery.counterup.min.js"></script>
+    <script src="../Recursos/js/waypoints.min.js"></script>
+    <script src="../Recursos/js/custom.js"></script>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head >
+<body >
+    <form id="form1" runat="server" class="fondo_inicio">
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,382 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E31763DA-1D07-4BAA-9FED-5D4B3653D40E}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SkillsUp</RootNamespace>
+    <AssemblyName>SkillsUp</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.1\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.0.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.0.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.0.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.0.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.0.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.0.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="GUI\actualiza_informacion.aspx" />
+    <Content Include="GUI\ADMINISTRADOR_publicaciones.aspx" />
+    <Content Include="GUI\ADMINISTRADOR_USAURIOS_REGISTRADOS.aspx" />
+    <Content Include="GUI\index_admin.aspx" />
+    <Content Include="GUI\Index_User.aspx" />
+    <Content Include="GUI\Principal_informacion.aspx" />
+    <Content Include="GUI\recuperar_contraseña.aspx" />
+    <Content Include="GUI\registro_de_usuarios.aspx" />
+    <Content Include="GUI\user.aspx" />
+    <Content Include="GUI\visualizar_datos_usuario.aspx" />
+    <Content Include="jquery\jquery-1.10.2.js" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom.js" />
+    <Content Include="jquery\jquery-ui-1.10.4.custom.min.js" />
+    <Content Include="packages.config" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PaginaMaestra\index_login.Master" />
+    <Content Include="Recursos\CSS2\ace-rtl.min.css" />
+    <Content Include="Recursos\CSS2\ace-skins.min.css" />
+    <Content Include="Recursos\CSS2\ace.min.css" />
+    <Content Include="Recursos\CSS2\bootstrap.min.css" />
+    <Content Include="Recursos\CSS2\font-awesome.min.css" />
+    <Content Include="Recursos\CSS2\fonts.googleapis.com.css" />
+    <Content Include="Recursos\css\css" />
+    <Content Include="PaginaMaestra\DASHBOARD_USUARIOS.Master" />
+    <Content Include="Recursos\estilos\estilos.css" />
+    <Content Include="Recursos\estilos\hover.css" />
+    <Content Include="Recursos\estilos\ihover.css" />
+    <Content Include="Recursos\hover\hover.css.map" />
+    <Content Include="PaginaMaestra\registro.Master" />
+    <Content Include="PaginaMaestra\Dashboard.Master" />
+    <Content Include="PaginaMaestra\MP_usuario.Master" />
+    <Content Include="PaginaMaestra\Dahsboard_administrador.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Recursos\css\animate.css" />
+    <Content Include="Recursos\css\bootstrap.min.css" />
+    <Content Include="Recursos\css\demo.css" />
+    <Content Include="Recursos\css\flaticon.css" />
+    <Content Include="Recursos\css\magnific-popup.css" />
+    <Content Include="Recursos\css\owl.carousel.min.css" />
+    <Content Include="Recursos\css\slick.css" />
+    <Content Include="Recursos\css\style.css" />
+    <Content Include="Recursos\css\themify-icons.css" />
+    <Content Include="Recursos\css_predeterminadas\bootstrap.css" />
+    <Content Include="Recursos\css_predeterminadas\bootstrap.min.css" />
+    <Content Include="Recursos\css_predeterminadas\estilos.css" />
+    <Content Include="Recursos\css_predeterminadas\jquery-confirm.css" />
+    <Content Include="Recursos\css_predeterminadas\scss-files.txt" />
+    <Content Include="Recursos\css_predeterminadas\style.css" />
+    <Content Include="Recursos\hover\hover-min.css" />
+    <Content Include="Recursos\hover\hover.css" />
+    <Content Include="Recursos\IMG\Iconos\AA.png" />
+    <Content Include="Recursos\IMG\Iconos\bajar.png" />
+    <Content Include="Recursos\IMG\Iconos\campana.png" />
+    <Content Include="Recursos\IMG\Iconos\cerrar.png" />
+    <Content Include="Recursos\IMG\Iconos\config.png" />
+    <Content Include="Recursos\IMG\Iconos\ico_user.png" />
+    <Content Include="Recursos\IMG\Iconos\modulo2.png" />
+    <Content Include="Recursos\IMG\Iconos\notification.png" />
+    <Content Include="Recursos\IMG\Iconos\perfil.png" />
+    <Content Include="Recursos\IMG\Iconos\User.png" />
+    <Content Include="Recursos\IMAGENES\aprendiendo.jpg" />
+    <Content Include="Recursos\IMAGENES\capacita.jpg" />
+    <Content Include="Recursos\IMAGENES\cursos.png" />
+    <Content Include="Recursos\IMAGENES\edificioutm.jpg" />
+    <Content Include="Recursos\IMAGENES\fondo.jpg" />
+    <Content Include="Recursos\IMAGENES\fondo_2.jpg" />
+    <Content Include="Recursos\IMAGENES\habiladaencontrada.png" />
+    <Content Include="Recursos\IMAGENES\habilidades.png" />
+    <Content Include="Recursos\IMAGENES\laboral.png" />
+    <Content Include="Recursos\IMAGENES\llenadatos.jpg" />
+    <Content Include="Recursos\IMAGENES\logo.png" />
+    <Content Include="Recursos\IMAGENES\utm.png" />
+    <Content Include="Recursos\JS2\ace-elements.min.js" />
+    <Content Include="Recursos\JS2\ace-extra.min.js" />
+    <Content Include="Recursos\JS2\ace.min.js" />
+    <Content Include="Recursos\JS2\bootstrap.min.js" />
+    <Content Include="Recursos\JS2\jquery-2.1.4.min.js" />
+    <Content Include="Recursos\JS2\jquery-ui.custom.min.js" />
+    <Content Include="Recursos\JS2\jquery.bootstrap-duallistbox.min.js" />
+    <Content Include="Recursos\JS2\jquery.easypiechart.min.js" />
+    <Content Include="Recursos\JS2\jquery.flot.min.js" />
+    <Content Include="Recursos\JS2\jquery.flot.pie.min.js" />
+    <Content Include="Recursos\JS2\jquery.flot.resize.min.js" />
+    <Content Include="Recursos\JS2\jquery.mobile.custom.min.js" />
+    <Content Include="Recursos\JS2\jquery.sparkline.index.min.js" />
+    <Content Include="Recursos\JS2\jquery.ui.touch-punch.min.js" />
+    <Content Include="Recursos\js\bootstrap.min.js" />
+    <Content Include="Recursos\js\custom.js" />
+    <Content Include="Recursos\js\jquery-1.12.1.min.js" />
+    <Content Include="Recursos\js\jquery.counterup.min.js" />
+    <Content Include="Recursos\js\jquery.magnific-popup.js" />
+    <Content Include="Recursos\js\jquery.nice-select.min.js" />
+    <Content Include="Recursos\js\masonry.pkgd.js" />
+    <Content Include="Recursos\js\owl.carousel.min.js" />
+    <Content Include="Recursos\js\popper.min.js" />
+    <Content Include="Recursos\js\slick.min.js" />
+    <Content Include="Recursos\js\swiper.min.js" />
+    <Content Include="Recursos\js\waypoints.min.js" />
+    <Content Include="Recursos\js_predeterminadas\bootstrap.js" />
+    <Content Include="Recursos\js_predeterminadas\jquery-1.11.2.min.js" />
+    <Content Include="Recursos\js_predeterminadas\jquery-3.4.1.min.js" />
+    <Content Include="Recursos\js_predeterminadas\jquery-confirm.js" />
+    <Content Include="Recursos\js_predeterminadas\locationpicker.jquery.js" />
+    <Content Include="Recursos\js_predeterminadas\main.js" />
+    <Content Include="scripts\ai.0.22.9-build00167.js" />
+    <Content Include="scripts\ai.0.22.9-build00167.min.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BO\login_BO.cs" />
+    <Compile Include="BO\publicaciones_BO.cs" />
+    <Compile Include="BO\usuario_BO.cs" />
+    <Compile Include="DAO\conexion_correos.cs" />
+    <Compile Include="DAO\conexion_DAO.cs" />
+    <Compile Include="DAO\login_DAO.cs" />
+    <Compile Include="DAO\publicaciones_DAO.cs" />
+    <Compile Include="DAO\servicio_email_DAO.cs" />
+    <Compile Include="DAO\SystemSupportMail.cs" />
+    <Compile Include="DAO\usuario_DAO.cs" />
+    <Compile Include="GUI\actualiza_informacion.aspx.cs">
+      <DependentUpon>actualiza_informacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\actualiza_informacion.aspx.designer.cs">
+      <DependentUpon>actualiza_informacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ADMINISTRADOR_publicaciones.aspx.cs">
+      <DependentUpon>ADMINISTRADOR_publicaciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\ADMINISTRADOR_publicaciones.aspx.designer.cs">
+      <DependentUpon>ADMINISTRADOR_publicaciones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ADMINISTRADOR_USAURIOS_REGISTRADOS.aspx.cs">
+      <DependentUpon>ADMINISTRADOR_USAURIOS_REGISTRADOS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\ADMINISTRADOR_USAURIOS_REGISTRADOS.aspx.designer.cs">
+      <DependentUpon>ADMINISTRADOR_USAURIOS_REGISTRADOS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\index_admin.aspx.cs">
+      <DependentUpon>index_admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\index_admin.aspx.designer.cs">
+      <DependentUpon>index_admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Index_User.aspx.cs">
+      <DependentUpon>Index_User.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\Index_User.aspx.designer.cs">
+      <DependentUpon>Index_User.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Principal_informacion.aspx.cs">
+      <DependentUpon>Principal_informacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\Principal_informacion.aspx.designer.cs">
+      <DependentUpon>Principal_informacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\recuperar_contraseña.aspx.cs">
+      <DependentUpon>recuperar_contraseña.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\recuperar_contraseña.aspx.designer.cs">
+      <DependentUpon>recuperar_contraseña.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\registro_de_usuarios.aspx.cs">
+      <DependentUpon>registro_de_usuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\registro_de_usuarios.aspx.designer.cs">
+      <DependentUpon>registro_de_usuarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\user.aspx.cs">
+      <DependentUpon>user.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\user.aspx.designer.cs">
+      <DependentUpon>user.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\visualizar_datos_usuario.aspx.cs">
+      <DependentUpon>visualizar_datos_usuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\visualizar_datos_usuario.aspx.designer.cs">
+      <DependentUpon>visualizar_datos_usuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PaginaMaestra\Dahsboard_administrador.Master.cs">
+      <DependentUpon>Dahsboard_administrador.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaginaMaestra\Dahsboard_administrador.Master.designer.cs">
+      <DependentUpon>Dahsboard_administrador.Master</DependentUpon>
+    </Compile>
+    <Compile Include="PaginaMaestra\Dashboard.Master.cs">
+      <DependentUpon>Dashboard.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaginaMaestra\Dashboard.Master.designer.cs">
+      <DependentUpon>Dashboard.Master</DependentUpon>
+    </Compile>
+    <Compile Include="PaginaMaestra\DASHBOARD_USUARIOS.Master.cs">
+      <DependentUpon>DASHBOARD_USUARIOS.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaginaMaestra\DASHBOARD_USUARIOS.Master.designer.cs">
+      <DependentUpon>DASHBOARD_USUARIOS.Master</DependentUpon>
+    </Compile>
+    <Compile Include="PaginaMaestra\index_login.Master.cs">
+      <DependentUpon>index_login.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaginaMaestra\index_login.Master.designer.cs">
+      <DependentUpon>index_login.Master</DependentUpon>
+    </Compile>
+    <Compile Include="PaginaMaestra\MP_usuario.Master.cs">
+      <DependentUpon>MP_usuario.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaginaMaestra\MP_usuario.Master.designer.cs">
+      <DependentUpon>MP_usuario.Master</DependentUpon>
+    </Compile>
+    <Compile Include="PaginaMaestra\registro.Master.cs">
+      <DependentUpon>registro.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaginaMaestra\registro.Master.designer.cs">
+      <DependentUpon>registro.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Recursos\fotos_perfil\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>60807</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:60807/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

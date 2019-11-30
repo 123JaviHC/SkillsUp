@@ -1,0 +1,63 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="DASHBOARD_USUARIOS.master.cs" Inherits="SkillsUp.PaginaMaestra.DASHBOARD_USUARIOS" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+
+ <%--   ESTILOS--%>
+    <script src="../Recursos/js_predeterminadas/bootstrap.js"></script>
+    <script src="../Recursos/js_predeterminadas/jquery-3.4.1.min.js"></script>
+    <script src="../Recursos/js_predeterminadas/jquery-confirm.js"></script>
+    <script src="../Recursos/js_predeterminadas/locationpicker.jquery.js"></script>
+    <script src="../Recursos/js_predeterminadas/main.js"></script>
+    <link href="../Recursos/css_predeterminadas/bootstrap.css" rel="stylesheet" />
+    <link href="../Recursos/css_predeterminadas/estilos.css" rel="stylesheet" />
+    <link href="../Recursos/css_predeterminadas/jquery-confirm.css" rel="stylesheet" />
+    <a href="../Recursos/css_predeterminadas/scss-files.txt">
+    <link href="../Recursos/css_predeterminadas/style.css" rel="stylesheet" />
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+
+         <div class="container-fluid">
+
+            <header class="row cabecera" style="background-color:#2E64FE">
+
+
+                <div class="col-md-2">
+                    <figure >
+                        <asp:Image ID="img_logo_dash" runat="server" src="../Recursos/IMAGENES/logo.png"  Style="width:180px;height:70px"/>
+
+                    </figure>
+
+                </div>
+
+<%--                para nombre de usuario--%>
+                <div class="col-md-10" >
+
+                    <asp:Label ID="lbl_usuario" runat="server" Text="USUARIO EN LINEA: "  ></asp:Label>
+                    <asp:Label ID="lbl_nombre_del_usuario" runat="server" Text="Label"></asp:Label>
+
+                </div>
+
+
+         </header>
+
+       </div>
+
+    <%--    termina aca la barra de color--%>
+          
+
+       <%-- <div>--%>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        <%--</div>--%>
+    </form>
+</body>
+</html>

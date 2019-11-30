@@ -1,0 +1,33 @@
+﻿.cabecera {
+    height:90px;
+    background-color:#229138;
+}
+
+/* para centrar texto horizontal de la cebecera*/
+
+.textocabecera {
+    position:center;
+}
+
+.textocabecera h1{
+    padding-left:20px;
+}
+
+.tamcolmenu {
+    height:810px;
+    border-right: 1px solid #808080;
+}
+
+.titulomenu{
+    background-color:#808080 !important;
+    color: #229138 !important;
+}
+
+.tamformulario{
+    width:450px;
+}
+
+.titulologin{
+    font-size:25px;
+}
+

@@ -1,0 +1,7 @@
+﻿.fondo_inicio {
+    background-image: url('../IMAGENES/fondo_2.jpg');
+    height: 100%;
+    width: 100%;
+    color: white;
+    z-index: 1;
+}

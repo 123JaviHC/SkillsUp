@@ -1,0 +1,91 @@
+create database SkillsUp
+
+use SkillsUp
+go
+
+
+
+create table Publicacion(
+id_publicacion int identity(1,1) primary key,
+vacante varchar(40) not null,
+habilidades varchar(100) not null,
+horario varchar(20) not null,
+sueldo varchar(10) not null,
+genero varchar(20) not null,
+direc_empresa varchar(60) not null,
+edad int not null,
+info_extra varchar(100) not null,
+contacto varchar(60) not null,
+
+
+
+)
+
+
+create table genero(
+id_gen int identity(1,1) primary key,
+nom_gen varchar(40) not null
+)
+
+create table pais(
+id_pais int identity(1,1) primary key,
+nom_pais varchar(40) not null
+)
+
+insert into pais values('mexico')
+go
+
+create table estado(
+id_estado int identity(1,1) primary key,
+nom_estado varchar(40) not null,
+fk_pais int null
+CONSTRAINT fk_pais FOREIGN KEY (fk_pais) REFERENCES pais  (id_pais),
+)
+
+insert into estado values('yucatan','1')
+
+create table tipo_usuario(
+id_tipo_usu int identity(1,1) primary key,
+nom_tipo_usu varchar(40) unique not null,
+descripcion_tipo_usu varchar(100) null
+)
+
+insert into tipo_usuario values('estudiante','pide trabajo')
+go
+create table usuario(
+id_usu int identity(1,1) primary key,
+nom_usu varchar(40) not null,
+ape_pat_usu varchar(40) not null,
+ape_mat_usu varchar(40) not null,
+telefono_usu varchar(15) null,
+fecha_nac_usu date null,
+correo_elec_usu varchar(40) unique not null,
+contrasenia_usu varchar(50) not null,
+foto_perfil varchar(100) null,
+habilidades varchar(100)  null,
+nickname varchar(30) not null,
+fk_gen_usu int null,
+fk_estado_usu int null,
+fk_pais_usu int null,
+fk_tipo_usu int  null
+
+CONSTRAINT fk_gen_usu FOREIGN KEY (fk_gen_usu) REFERENCES genero (id_gen),
+CONSTRAINT fk_estado_usu FOREIGN KEY (fk_estado_usu) REFERENCES estado (id_estado),
+CONSTRAINT fk_pais_usu FOREIGN KEY (fk_pais_usu) REFERENCES pais (id_pais),
+CONSTRAINT fk_tipo_usu FOREIGN KEY (fk_tipo_usu) REFERENCES tipo_usuario (id_tipo_usu),
+)
+
+
+
+/*insertando generos*/
+insert into genero values('masculino');
+insert into genero values('femenino');
+select *from genero
+select *from tipo_usuario
+
+select *from usuario
+
+
+select nickname,correo_elec_usu,contrasenia_usu from usuario
+
+
